@@ -25,7 +25,6 @@ jobs:
         cache: 'pip'
 
     - run: pip install -r requirements.txt
-    - run: alembic upgrade head
 
     - name: Sync github events
       run: python main.py --sync-user-created-events --sync-user-received-events --sync-billing-stats
